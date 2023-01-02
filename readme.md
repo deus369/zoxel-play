@@ -6,6 +6,8 @@ Experience the thrill of discovery and adventure in this groundbreaking, procedu
 
 > [[devlog_119](https://www.youtube.com/watch?v=Yb5DiXVt1k0.mp4)]
 
+Mirrors [[Codeberg](https://codeberg.org/deus/zoxel)] | [[Github](https://github.com/deus369/zoxel)]
+
 ## What is Zoxel?
 
 - A unique voxel-based visual style that sets the game apart from other RPGs
@@ -32,12 +34,10 @@ As a solo developer, I have poured my heart and soul into creating this game, an
 
 Follow our development journey and stay up to date on the latest news and updates by following us on social media!
 
-[[Itch IO](https://deus0.itch.io/zoxel)]
-
 [[Mastodon](https://mastodon.gamedev.place/@deus)]
 
 [[Twitter](https://twitter.com/deusxyz)]
 
-[[Link Tree](https://linktr.ee/lorddeus)]
+[[Itch IO](https://deus0.itch.io/zoxel)]
 
-Mirrors [[Codeberg](https://codeberg.org/deus/zoxel)] | [[Github](https://github.com/deus369/zoxel)]
+[[Link Tree](https://linktr.ee/lorddeus)]
