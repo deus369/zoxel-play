@@ -66,4 +66,4 @@ sleep 1
 # finally push the git change
 git push -u origin master
 echo Finished Git Push
-sleep 6
+sleep 16
