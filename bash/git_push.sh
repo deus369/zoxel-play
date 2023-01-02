@@ -64,6 +64,6 @@ git commit -m "$commitmsg"	# create commit
 echo "	- Created commit."
 sleep 1
 # finally push the git change
-git push -u origin master
+git push -u origin main # no longer master branch but main
 echo Finished Git Push
 sleep 16
