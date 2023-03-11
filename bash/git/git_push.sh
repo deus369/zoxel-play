@@ -1,20 +1,7 @@
 #! /bin/bash
 
 source git_check_user.sh
-
-ssh_key_location=$HOME/.ssh/zoxel
-
-echo "-> Connecting to Git with ssh key [$ssh_key_location]"
-if [ -f $ssh_key_location ]; then
-	echo "	- SSH Key found at [$ssh_key_location]"
-else
-	echo "	- SSH Key not found at [$ssh_key_location]"
-	sleep 6
-	exit
-fi
-eval "$(ssh-agent -s)"
-ssh-add $ssh_key_location
-ssh -T git@github.com
+source git_add_ssh.sh
 
 is_force=$(false)
 if [[ $1 = "-f" ]]; then
@@ -25,8 +12,8 @@ if [[ $1 = "-f" ]]; then
 	exit
 fi
 
-cd ..
-echo "Inside Directory [$PWD]"
+cd ../../
+echo "Inside Directory [$PWD]" # should be zoxel directory
 echo "-> Getting modified or updated git files."
 modified_and_new_files="$(git ls-files --modified --others --exclude-standard)"
 if [ -z "$modified_and_new_files" ]; then
@@ -53,7 +40,7 @@ else
 	echo "========================="
 	echo ""
 	# echo $modified_and_new_files
-	sleep 1
+	# sleep 1
 fi
 
 echo "-> Enter your commit message"
@@ -62,8 +49,18 @@ echo "	- Commit message is [$commitmsg]"
 git add -A	# add all files to staged list
 git commit -m "$commitmsg"	# create commit
 echo "	- Created commit."
-sleep 1
+# sleep 1
 # finally push the git change
-git push -u origin main # no longer master branch but main
+git push -u origin master
 echo Finished Git Push
-sleep 16
+
+# filesUpdated2=$(git diff --name-only)
+# if [ -z "$filesUpdated2" ]; then
+# 	echo "No files have been updated."
+# 	sleep 6
+# 	exit
+# else
+# 	echo "Files have been updated but not commited."
+# 	echo $filesUpdated2
+# fi
+# filesUpdated="$(git ls-files -o)"
