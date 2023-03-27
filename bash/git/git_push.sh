@@ -13,7 +13,8 @@ if [ -z "$modified_and_new_files" ]; then
 	echo ""
 	echo "========================="
 	echo ""
-	sleep 6
+	git push # -u origin master
+	# sleep 6
 	exit
 else
 	# echo "Files have been modified or added."
