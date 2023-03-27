@@ -3,16 +3,7 @@
 source git_check_user.sh
 source git_add_ssh.sh
 
-is_force=$(false)
-if [[ $1 = "-f" ]]; then
-	is_force=$(true)
-	echo "Forcing push."
-	git push -u origin master
-	sleep 6
-	exit
-fi
-
-cd ../../
+# cd ../../
 echo "Inside Directory [$PWD]" # should be zoxel directory
 echo "-> Getting modified or updated git files."
 modified_and_new_files="$(git ls-files --modified --others --exclude-standard)"
@@ -51,7 +42,7 @@ git commit -m "$commitmsg"	# create commit
 echo "	- Created commit."
 # sleep 1
 # finally push the git change
-git push -u origin master
+git push # -u origin master
 echo Finished Git Push
 
 # filesUpdated2=$(git diff --name-only)
